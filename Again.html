@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ambar ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    background: #fffdf9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.scene {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+}
+
+/* Large text for mobile screens */
+.love-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(5px, 2vw, 15px);
+    white-space: nowrap;
+}
+
+.letter {
+    display: inline-block;
+    font-size: clamp(60px, 17vw, 105px);
+    font-weight: 900;
+    line-height: 1.15;
+    color: #080808;
+    opacity: 0;
+    animation: letterFall 1.25s cubic-bezier(.2,.75,.3,1.25)
+               forwards;
+}
+
+.heart {
+    display: inline-block;
+    font-size: clamp(65px, 19vw, 115px);
+    line-height: 1;
+    opacity: 0;
+    animation:
+        letterFall 1.3s cubic-bezier(.2,.75,.3,1.25) 0.6s forwards,
+        heartbeat 0.65s ease-in-out 3.1s 3;
+    filter: drop-shadow(0 5px 5px #ffb4c0);
+}
+
+/* Each letter falls at a different time */
+.i     { animation-delay: 0.15s; }
+.l     { animation-delay: 0.65s; }
+.o     { animation-delay: 1.05s; }
+.v     { animation-delay: 1.45s; }
+.e     { animation-delay: 1.85s; }
+
+.you-line {
+    display: flex;
+    justify-content: center;
+    gap: clamp(5px, 2vw, 14px);
+    margin-top: 12px;
+}
+
+.y { animation-delay: 2.1s; }
+.o2 { animation-delay: 2.4s; }
+.u { animation-delay: 2.7s; }
+
+.ambar {
+    margin-top: 28px;
+    font-size: clamp(25px, 7vw, 40px);
+    font-weight: bold;
+    letter-spacing: clamp(4px, 1.5vw, 8px);
+    color: #e91e45;
+    opacity: 0;
+    animation: showAmbar 1s ease-out 3.8s forwards;
+    text-shadow: 0 4px 12px #ffb6c1;
+}
+
+@keyframes letterFall {
+    0% {
+        transform: translateY(-110vh) rotate(-12deg);
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    62% {
+        transform: translateY(0) rotate(3deg);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateY(-45px) rotate(-2deg);
+    }
+
+    85% {
+        transform: translateY(0) rotate(1deg);
+    }
+
+    93% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes showAmbar {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(.75);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="scene">
+    <div class="content">
+
+        <div class="love-line">
+            <span class="letter i">I</span>
+            <span class="letter l">L</span>
+            <span class="letter o">O</span>
+            <span class="letter v">V</span>
+            <span class="letter e">E</span>
+        </div>
+
+        <div class="you-line">
+            <span class="letter y">Y</span>
+            <span class="letter o2">O</span>
+            <span class="letter u">U</span>
+        </div>
+
+        <div class="ambar">AMBAR ❤️</div>
+
+    </div>
+</div>
+</body>
+</html>
